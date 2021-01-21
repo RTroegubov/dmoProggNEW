@@ -67,37 +67,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Class1.cs" />
     <Compile Include="classes\Core.cs" />
     <Compile Include="Client.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model_Organizaciy.tt</DependentUpon>
     </Compile>
     <Compile Include="ClientService.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model_Organizaciy.tt</DependentUpon>
     </Compile>
     <Compile Include="DocumentByService.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model_Organizaciy.tt</DependentUpon>
     </Compile>
     <Compile Include="Gender.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model_Organizaciy.tt</DependentUpon>
     </Compile>
     <Compile Include="Manufacturer.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>Model_Organizaciy.tt</DependentUpon>
     </Compile>
     <Compile Include="Model_Organizaciy.cs">
       <AutoGen>True</AutoGen>
@@ -105,22 +89,22 @@
       <DependentUpon>Model_Organizaciy.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model_Organizaciy.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductPhoto.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model_Organizaciy.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductSale.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model_Organizaciy.tt</DependentUpon>
     </Compile>
     <Compile Include="Service.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model_Organizaciy.tt</DependentUpon>
     </Compile>
     <Compile Include="ServicePhoto.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model_Organizaciy.tt</DependentUpon>
     </Compile>
     <Compile Include="Tag.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model_Organizaciy.tt</DependentUpon>
     </Compile>
     <Compile Include="windows\InputBoxWindow.xaml.cs">
       <DependentUpon>InputBoxWindow.xaml</DependentUpon>
@@ -174,13 +158,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model_Organizaciy.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <EntityDeploy Include="Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </None>
     <None Include="Model_Organizaciy.edmx.diagram">
       <DependentUpon>Model_Organizaciy.edmx</DependentUpon>
     </None>
@@ -200,16 +177,6 @@
     <Resource Include="image\service_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Content Include="Model_Organizaciy.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model_Organizaciy.Context.cs</LastGenOutput>

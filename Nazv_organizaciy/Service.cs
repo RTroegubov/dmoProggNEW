@@ -11,7 +11,8 @@ namespace Nazv_organizaciy
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.IO;
+
     public partial class Service
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,7 +21,58 @@ namespace Nazv_organizaciy
             this.ClientService = new HashSet<ClientService>();
             this.ServicePhoto = new HashSet<ServicePhoto>();
         }
-    
+
+        public Uri ImageUri
+        {
+            get
+            {
+                return new Uri(Path.Combine(Environment.CurrentDirectory, MainImagePath));
+            }
+        }
+
+
+        public string CostString
+        {
+            get
+            {
+                return Cost.ToString("#.##");
+            }
+        }
+
+        public string DiscountString
+        {
+           get
+          {
+                string s2 = (Discount * 100).ToString();
+                string s1 = "%";
+                return s2 + s1;
+         }
+        }
+        
+        public string CostWithDiscount
+        {
+            get
+            {
+                return (Cost * Convert.ToDecimal(1 - Discount ?? 0)).ToString("#.##");
+            }
+        }
+
+        public Boolean HasDiscount
+        {
+            get
+            {
+                return Discount == 0;
+            }
+        }
+
+        public string CostTextDecoration
+        {
+            get
+            {
+                return HasDiscount ? "None" : "Strikethrough";
+            }
+        }
+
         public int ID { get; set; }
         public string Title { get; set; }
         public decimal Cost { get; set; }
